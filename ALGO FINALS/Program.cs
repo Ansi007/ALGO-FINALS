@@ -1,4 +1,41 @@
-﻿public class Kth_Smallest
+﻿
+
+
+
+
+
+
+/*
+ 
+Trees and their types and teriminologies
+
+1- Tree: A undirected,acyclic connected graph.
+2- Rooted Tree: Divided in levels, first node is root.
+3- Binary Tree: With at max two childs at any node.
+4- Balanced Tree: With height of O(lgn).
+5- Full Binary Tree: If all of the nodes have exactly two childs.
+6- Complete Binary Tree: If all of the nodes have exactly two childs and all of the leaves are at last level.              level.
+7- Heap Tree: Completed till 2nd last level. Filled from left to right.
+8- Parent,Child,Siblings,Ascedents,Descedents.
+9- Level (increase top to bottom) & Height (increase bottom to top)
+
+Q: A Complete Binary Tree of height 'h' can have at max how many nodes (n)?
+A: n = (2^(h+1)) - 1
+
+Q: A Complete Binary Tree of height 'h', have how many nodes(n) at height 'k'?
+A: (2^h-k) or (n`+1)/(2^k+1)
+
+Max Heap: Every Parent > Child
+Min Heap: Every Parent < Child
+Left Child = 2*i + 1
+Right Child = 2*i + 2
+Parent = floor(i-1/2)
+
+
+ */
+
+
+public class Kth_Smallest
 {
 
 /*
@@ -11,6 +48,8 @@
     5- if(K < indexOf(m)) FindKthSmallest(Small,K)
         else FindKthSmallest(Large,K)
     6- return KthSmallest
+
+    T(n) = T(n/5) + T(3n/4) + O(n)
 
  */
     public static int FindKthSmallest(ref int[] array, int K)
@@ -81,6 +120,7 @@ public class QuickSort
  
     Best Case = O(nlogn)
     Worst Case = O(n^2)
+
     After every iteration, pivot is at its right and sorted position
     Pivot is choosed at random
     Pivot is partitioned, left array is smaller and right is larger
