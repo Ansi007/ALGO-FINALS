@@ -1,4 +1,68 @@
-﻿public class HomeWork02
+﻿
+int[] array = {18,19,20,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 };
+QuickSort.Sort(ref array,0,array.Length);
+
+public class HomeWork02B
+{
+    void p1Searching(int[] A, int X)
+    {
+        /*
+            Sort the array,
+        int i = 0; int j = n - 1;
+        while(i < j){
+         if(A[i]+A[j]==X) return i,j;
+         else if(A[i]+A[j]<X) return i++;
+         else return j--;
+
+         */
+    }
+
+    void p2Decision(int[] S1, int[] S2)
+    {
+        /*
+            Sort the sets (nlogn)
+        int i = 0; int j = 0;
+        while(i < j){
+         if(S1[i]==S2[j]) return false;
+         else if(S1[i]<S2[j]) return i++;
+         else return j--;
+         */
+    }
+
+    void p3FindTwoMinimums(int[] array)
+    {
+
+    }
+
+    void p4FindRange(int[] array, int a, int b)
+    {
+        //  5 4 3 7 8 3 5 6 2 2 3 6 89 67 5 4 3 2 3 3 4 56 6 78 9
+        //Find Maximum Number for this case its 89
+        // 3 39
+    }
+
+    void p5Sort(int[] array)
+    {
+    /*
+        Extract lgn unique elements (n)
+        now are n = lgn
+        Apply any sort(lgn) nlglgn
+        Reinsert duplicated where they belongs (n)
+        T(n) = n + nlglgn + n
+        O(nlglgn)
+
+         
+         */
+    }
+}
+
+
+
+
+
+
+
+public class HomeWork02A
 {
     void p1Searching(int[] A, int X)
     {
@@ -205,74 +269,15 @@
 public class MaxHeap
 {
 
-/*
- 
-    Start from 2nd Last level, from right to left and heapify every node.
-    e.g: 1 2 3 4 5 6 7
-    int i = ceil(Length(A)/2) to 1
-            1
-        2       3
-      4   5   6   7
-
- */
-
-
-    public static void BuildMaxHeapIterative(ref int[] array)
-    {
-        for(int i = (array.Length / 2)-1; i >= 0; i--)
-        {
-            HeapifyIterative(ref array, i);
-        }
+    /*
+        Every Parent is greater than childs
+        BuildMaxHeap(){ //O(n)
+            foreach node heapify 
     }
-
-    static void HeapifyIterative(ref int[] array, int i)
-    {
-        int LC = 2 * i + 1;
-        int RC = 2 * i + 2;
-        int max = 0;
-        int max_index = 0;
-        int n = array.Length;
-        int LCV = -1, RCV = -1;
-
-        if (RC < n)
-            RCV = array[RC];
-
-        if(LC < n)
-            LCV = array[LC];
-
-        if (LCV > RCV)
-        {
-            if (LCV > array[i])
-            {
-                max = LCV;
-                max_index = LC;
-            }
-            else
-            {
-                max = array[i];
-                max_index = i;
-            }
-        }
-        else
-        {
-            if (RCV > array[i])
-            {
-                max = RCV;
-                max_index = RC;
-            }
-            else
-            {
-                max = array[i];
-                max_index = i;
-            }
-        }
-
-        int temp = array[i];
-        array[i] = max;
-        array[max_index] = temp;
+     */
 
 
-    }
+
 }
 
 
